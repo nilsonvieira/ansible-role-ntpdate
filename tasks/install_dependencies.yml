@@ -1,0 +1,6 @@
+---
+- name: Install Packages Needed
+  package:
+    name: {{ ntpdate_packages }}
+    state: presents
+  tags: install

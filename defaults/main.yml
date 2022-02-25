@@ -1,0 +1,9 @@
+---
+ntpdate_packages:
+  - ntpdate
+# defaults file for ansible-ntpdate
+ntpdate_enabled: true
+# how many times ntpdate should be called
+ntpdate_runs: 3
+# the ntp server to use for ntpdate
+ntpdate_server: "mateus.dc"

@@ -1,0 +1,16 @@
+---
+- include: install_dependencies.yml
+
+- name: Stop Service
+  service:
+    name: ntp
+    state: stopped
+  tags: ntpdate-run
+  ignore_errors: true
+
+- name: Execute ntpdate runs
+  command: "ntpdate -s {{ ntpdate_server|default('mateus.dc') }}"
+  notify:
+    - start ntpd
+  with_sequence: count="{{ ntpdate_runs|int }}"
+  tags: ntpdate-run

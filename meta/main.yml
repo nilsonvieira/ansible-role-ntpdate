@@ -1,0 +1,13 @@
+galaxy_info:
+  author: Nilson Vieira
+  description: Ansible NTP Update
+  company:
+  license: Apache
+
+  min_ansible_version: 2.10.8
+  python_version: 3.9.7
+  
+  platforms:
+
+  galaxy_tags:
+    - ntpdate
